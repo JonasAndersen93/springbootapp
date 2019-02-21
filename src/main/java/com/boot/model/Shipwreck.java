@@ -12,7 +12,7 @@ public class Shipwreck {
 	Long id;
 	String name;
 	String description;
-	String condition;
+	String condi;
 	Integer depth;
 	Double latitude;
 	Double longitude;
@@ -24,7 +24,7 @@ public class Shipwreck {
 		this.id = id;
 		this.name = name;
 		this.description = description;
-		this.condition = condition;
+		this.condi = condition;
 		this.depth = depth;
 		this.latitude = latitude;
 		this.longitude = longitude;
@@ -56,11 +56,11 @@ public class Shipwreck {
 	}
 
 	public String getCondition() {
-		return condition;
+		return condi;
 	}
 
 	public void setCondition(String condition) {
-		this.condition = condition;
+		this.condi = condition;
 	}
 
 	public Integer getDepth() {
