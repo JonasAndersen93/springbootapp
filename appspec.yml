@@ -1,0 +1,21 @@
+version: 0.0 # File is not jet used
+os: linux
+files:
+  - source: target/spring-boot-app-1.0-SNAPSHOT.jar
+    destination: /var/denti/
+hooks:
+  ApplicationStop:
+    - location: scripts/stop-service.sh
+      timeout: 180
+  BeforeInstall:
+    - location: scripts/current.sh
+      timeout: 180
+  AfterInstall:
+    - location: scripts/rename.sh
+      timeout: 180
+  ApplicationStart:
+    - location: scripts/start-service.sh
+      timeout: 180
+  ValidateService:
+    - location: scripts/validate.sh
+      timeout: 180
